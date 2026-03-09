@@ -1,0 +1,21 @@
+No,Category,Guideline,Description,Do,Don't,Severity
+1,Layout,Responsive Container,Use max-w-* classes for content containers with centered alignment,max-w-7xl mx-auto px-4,w-full without max-width constraint,MEDIUM
+2,Layout,Mobile First,Write CSS for mobile first then use md: lg: breakpoints for larger screens,base + md: + lg: classes,lg: only without mobile base,MEDIUM
+3,Layout,Grid System,Use CSS Grid for 2D layouts and Flexbox for 1D alignment,grid grid-cols-1 md:grid-cols-3 gap-6,float or table for layout,HIGH
+4,Components,Button States,All buttons need hover active focus and disabled states,hover:bg-blue-600 active:bg-blue-700 focus:ring-2,only base class without states,HIGH
+5,Components,Card Hover,Add subtle hover effects to indicate interactivity,hover:shadow-lg hover:-translate-y-1 transition,no hover effect on clickable cards,MEDIUM
+6,Components,Form Validation,Show validation states with color icons and messages,border-red-500 focus:ring-red-500 with error message,only red border without message,CRITICAL
+7,Components,Loading States,Show loading spinners or skeleton screens during data fetch,Skeleton component or spinner with aria-busy=true,no visual feedback during loading,HIGH
+8,Components,Empty States,Design meaningful empty states with illustrations and CTAs,Illustration + message + primary CTA button,blank page or just No data text,MEDIUM
+9,Accessibility,Semantic HTML,Use proper HTML elements for their intended purpose,nav main article section aside footer,div for everything,MEDIUM
+10,Accessibility,Focus Visible,Ensure all interactive elements show visible focus indicator,focus:ring-2 focus:ring-offset-2,outline-none without replacement,CRITICAL
+11,Accessibility,Alt Text,Provide descriptive alt text for meaningful images,alt=Product screenshot showing dashboard,alt=image or empty alt for content images,CRITICAL
+12,Accessibility,Color Contrast,Maintain 4.5:1 contrast ratio for normal text,Check with WebAIM Contrast Checker,rely on color alone for information,HIGH
+13,Performance,Lazy Loading,Use loading=lazy for below-fold images,<img loading=lazy src=...>,load all images immediately,HIGH
+14,Performance,Image Optimization,Use WebP format with fallbacks and proper sizing,<picture> with WebP and fallback,use unoptimized PNG/JPG,MEDIUM
+15,Performance,Animation Performance,Use transform and opacity for animations,transform: translateX(0) transition-transform,animate width height margin,HIGH
+16,Typography,Font Stack,Use system font stack or load web fonts properly,font-sans or Google Fonts with display=swap,many custom fonts without optimization,MEDIUM
+17,Typography,Responsive Text,Use fluid typography with clamp() or responsive classes,text-xl md:text-2xl lg:text-3xl,fixed pixel sizes everywhere,MEDIUM
+18,Spacing,Consistent Scale,Use Tailwind spacing scale consistently,p-4 m-2 gap-6,random values like p-[17px] or m-[23px],MEDIUM
+19,Spacing,Breathing Room,Add adequate whitespace between sections,p-8 md:p-12 lg:p-16 for sections,cramped spacing without visual separation,MEDIUM
+20,Effects,Transition Duration,Use 150-300ms for UI transitions,transition duration-200,transition duration-1000 (too slow),MEDIUM
